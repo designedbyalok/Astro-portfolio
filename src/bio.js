@@ -1,7 +1,7 @@
 export const bio = {
   name: "Alok Kumar",
   shortName: "Alok",
-  image: "/Alok.jpeg",
+  image: "/Alok.jpeg" alt="Alok Photo",
   designation: "Product Designer",
   email: "designedbyalok@gmail.com",
   about:
@@ -9,17 +9,17 @@ export const bio = {
   socials: [
     {
       name: "LinkedIn",
-      icon: "/linkedin.svg",
+      icon: "/linkedin.svg" alt="Linkedin Icon",
       url: "https://www.linkedin.com/in/designedbyalok/",
     },
     {
       name: "Dribbble",
-      icon: "/dribbble.svg",
+      icon: "/dribbble.svg" alt="Dribbble Icon",
       url: "https://dribbble.com/designedbyalok",
     },
     {
       name: "Medium",
-      icon: "/medium.svg",
+      icon: "/medium.svg" alt="Dribbble Icon",
       url: "https://medium.com/@designedbyalok",
     },
   ],
@@ -38,7 +38,7 @@ export const bio = {
     },
     {
       name: "Contact",
-      url: "https://wa.me/+917879387321",
+      url: "https://wa.me/+917870387321",
     },
   ],
 };
