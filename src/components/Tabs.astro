@@ -8,7 +8,7 @@ const { tabs } = bio;
     {
         tabs.map((tab) => {
             const { url, name } = tab;
-            return <a href={url}>{name}</a>;
+            return <a href={url} target="_blank">{name} </a>;
         })
     }
 </div>
