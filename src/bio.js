@@ -26,7 +26,7 @@ export const bio = {
   tabs: [
     {
       name: "Blogs",
-      url: "",
+      url: "https://medium.com/@designedbyalok",
     },
     {
       name: "Works",
@@ -38,7 +38,7 @@ export const bio = {
     },
     {
       name: "Contact",
-      url: "",
+      url: "https://wa.me/+917879387321",
     },
   ],
 };
