@@ -12,19 +12,20 @@ const { email, socials } = bio;
     <ul>
         {
             socials.map((social, index, arr) => {
-                const { name, url, icon } = social;
+                const { name, url, icon,alt } = social;
                 return (
                     <>
                         <li>
                             <a href={url} target="_blank">
                                 <span>{name}</span>
-                                <img src={icon} />
+                                <img src={icon} alt={alt} />
                             </a>
                         </li>
                         {index < arr.length - 1 && (
                             <img
                                 class="separator"
                                 src="/separator.svg"
+                                alt="seperator-icon"
                             />
                         )}
                     </>

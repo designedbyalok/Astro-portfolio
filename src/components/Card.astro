@@ -1,12 +1,12 @@
 ---
 import { bio } from "../bio";
 
-const { shortName, image, designation, about } = bio;
+const { shortName, image,alt, designation, about } = bio;
 ---
 
 <div class="profile-card">
 	<div class="wrapper">
-		<img src={image} />
+		<img alt={alt} src={image} />
 		<div></div>
 		<div></div>
 		<div></div>
