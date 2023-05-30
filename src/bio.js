@@ -38,7 +38,7 @@ export const bio = {
     },
     {
       name: "Resume",
-      url: "https://www.dropbox.com/s/6azss1fz4e22pxo/Alok_Kumar-compressed.pdf?dl=0",
+      url: "/Alok_Kumar-Resume.pdf",
     },
     {
       name: "Contact",
