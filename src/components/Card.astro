@@ -1,7 +1,7 @@
 ---
 import { bio } from "../bio";
 
-const { shortName, image,alt, designation, about } = bio;
+const { name, shortName, image,alt, designation, about, company, description } = bio;
 ---
 
 <div class="profile-card">
@@ -12,9 +12,9 @@ const { shortName, image,alt, designation, about } = bio;
 		<div></div>
 		<div></div>
 	</div>
-	<h2>Hi, I am {shortName}</h2>
-	<h1>{designation}</h1>
-	<p>{about}</p>
+	<h2>Hi there, I am </h2>
+	<h1>{name}</h1>
+	<p>a {designation} at <a href="https://banyancloud.io/">{company}</a>. {description}</p>
 </div>
 <style>
 	.profile-card {
@@ -119,8 +119,8 @@ const { shortName, image,alt, designation, about } = bio;
 		font-weight: 900;
 		background: linear-gradient(
 			261.26deg,
-			#8e8e8e 3.96%,
-			#ffffff 50.9%,
+			#636363 3.96%,
+			#ffffffc9 50.9%,
 			#939393 97.85%
 		);
 		-webkit-background-clip: text;
@@ -153,5 +153,14 @@ const { shortName, image,alt, designation, about } = bio;
 	p {
 		text-align: center;
 		line-height: 2rem;
+	}
+	a{
+		text-decoration: none;
+		font-weight: 500;
+		color: #ffffff;
+	}
+	a:hover{
+		color: #83b1fc;
+		text-decoration: underline;
 	}
 </style>

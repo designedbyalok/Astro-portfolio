@@ -5,8 +5,8 @@ export const bio = {
   alt:'Alok Kumar',
   designation: "Product Designer",
   email: "designedbyalok@gmail.com",
-  about:
-    " a Product Designer in Bengaluru ,India. Currently busy bringing consumer level ease of use to enterprise products.",
+  company: "Banyan Cloud, Bengaluru",
+  description: "Currently busy bringing consumer level ease of use to enterprise products.",
   socials: [
     {
       name: "LinkedIn",
