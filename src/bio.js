@@ -34,7 +34,7 @@ export const bio = {
     },
     {
       name: "Works",
-      url: "https://linktr.ee/designedbyalok",
+      url: "https://bento.me/designedbyalok",
     },
     {
       name: "Resume",
