@@ -5,8 +5,8 @@ export const bio = {
   alt:'Alok Kumar',
   designation: "Product Designer",
   email: "designedbyalok@gmail.com",
-  company: "Banyan Cloud, Bengaluru",
-  description: "Currently busy bringing consumer level ease of use to enterprise products.",
+  company: "FoldHealth, Pune",
+  description: "Currently busy simplifying Digital HealthCare for all end-users",
   socials: [
     {
       name: "LinkedIn",
@@ -42,7 +42,7 @@ export const bio = {
     },
     {
       name: "Contact",
-      url: "https://wa.me/+917870387321",
+      url: "https://cal.com/alokkumar/30min",
     },
   ],
 };
