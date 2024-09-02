@@ -21,10 +21,10 @@ export const bio = {
       url: "https://dribbble.com/designedbyalok",
     },
     {
-      name: "Medium",
-      icon: "/medium.svg",
-      alt:"Medium Icon",
-      url: "https://medium.com/@designedbyalok",
+      name: "Twitter(X)",
+      icon: "/twitter.svg",
+      alt:"Twitter Icon",
+      url: "https://x.com/designedbyalok",
     },
   ],
   tabs: [
