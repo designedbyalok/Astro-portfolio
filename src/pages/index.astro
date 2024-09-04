@@ -5,12 +5,10 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Alok Kumar | Product Designer" >
-	<div>
-		<main>
-			<Card />
-			<Tabs />
-		</main>
-	</div>
+	<main>
+		<Card />
+		<Tabs />
+	</main>
 </Layout>
 
 <style>
@@ -18,9 +16,11 @@ import Layout from "../layouts/Layout.astro";
 		/*--astro-gradient: linear-gradient(45deg, #4f39fa, #da62c4);*/
 		--astro-gradient: linear-gradient(45deg, #a14df3, #e1b5f8);
 	}
-	div {
-		flex: 1;
+	main {
+		width:100vw;
+		height: 100vh;
 		display: flex;
+		flex: 1;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
