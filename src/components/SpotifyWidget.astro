@@ -1,18 +1,21 @@
-<div class="spotify-widget-modern">
-	<img class="album-art-modern" src="/src/layouts/Believer.jpeg" alt="Believer Album Art" />
-	<div class="spotify-track-info">
-		<div class="song-title-modern" title="Believer">Believer</div>
-		<div class="song-artist-modern" title="Imagine Dragons">Imagine Dragons</div>
+<div>
+	<div id="now-playing" style="display:block;">
+		<div class="spotify-widget-modern debug-border">
+			<img id="album-art" class="album-art-modern" src="/src/layouts/Believer.jpeg" alt="Believer Album Art" style="display:block;" />
+			<div class="spotify-track-info">
+				<div id="track-name" class="song-title-modern" title="Believer">Believer</div>
+				<div id="artist-name" class="song-artist-modern" title="Imagine Dragons">Imagine Dragons</div>
+			</div>
+			<div class="spotify-controls-row">
+				<button aria-label="Previous track" class="spotify-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg></button>
+				<button aria-label="Play" class="spotify-btn"><svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><polygon points="5 3 19 12 5 21 5 3"/></svg></button>
+				<button aria-label="Next track" class="spotify-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="5" x2="19" y2="19"></line></svg></button>
+			</div>
+			<span class="spotify-logo-modern">
+				<img class="spotify-logo-icon" src="/src/layouts/mdi_spotify.svg" alt="Spotify Logo" />
+			</span>
+		</div>
 	</div>
-	<div class="spotify-controls-row">
-		<button aria-label="Previous track" class="spotify-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg></button>
-		<button aria-label="Play" class="spotify-btn"><svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><polygon points="5 3 19 12 5 21 5 3"/></svg></button>
-		<button aria-label="Next track" class="spotify-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="5" x2="19" y2="19"></line></svg></button>
-	</div>
-	<span class="spotify-logo-modern">
-		<!-- White Spotify SVG icon -->
-		<img class="spotify-logo-icon" src="src/layouts/mdi_spotify.svg" alt="Spotify Logo" />
-	</span>
 </div>
 <style>
 .spotify-widget-modern {
@@ -96,12 +99,17 @@
 	margin-left: 0.2rem;
 }
 .spotify-btn {
+	width: 48px;
+	height: 48px;
+	min-width: 48px;
+	min-height: 48px;
 	background: none;
 	border: none;
 	padding: 0;
 	margin: 0;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	cursor: pointer;
 	transition: transform 0.15s;
 }
@@ -110,6 +118,10 @@
 }
 .spotify-btn:hover {
 	transform: scale(1.12);
+}
+.spotify-btn svg {
+	width: 24px;
+	height: 24px;
 }
 @media (max-width: 600px) {
 	.spotify-widget-modern {
@@ -138,4 +150,68 @@
 		height: 16px;
 	}
 }
-</style> 
+.spotify-login-btn {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	z-index: 21;
+	background: #1db954;
+	color: #fff;
+	border: none;
+	border-radius: 1.3rem;
+	padding: 0.6rem 1.2rem;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+	transition: background 0.2s;
+}
+.spotify-login-btn:hover {
+	background: #1ed760;
+}
+</style>
+<script is:inline>
+const FALLBACK_IMG = "/src/layouts/Believer.jpeg";
+const FALLBACK_TITLE = "Nothing playing";
+const FALLBACK_ARTIST = "";
+const ERROR_TITLE = "Error";
+const ERROR_ARTIST = "Could not fetch Spotify data";
+
+async function fetchNowPlaying() {
+  try {
+    const res = await fetch('/api/spotify-now-playing');
+    const data = await res.json();
+    console.log('Spotify API response:', data);
+    const trackName = document.getElementById("track-name");
+    const artistName = document.getElementById("artist-name");
+    const albumArt = document.getElementById("album-art");
+
+    if (!trackName || !artistName || !albumArt) {
+      console.error('Required DOM elements not found');
+      return;
+    }
+    if (!data.playing) {
+      trackName.textContent = FALLBACK_TITLE;
+      artistName.textContent = FALLBACK_ARTIST;
+      albumArt.src = FALLBACK_IMG;
+      albumArt.style.display = "block";
+      return;
+    }
+    trackName.textContent = data.name;
+    artistName.textContent = data.artists;
+    albumArt.src = data.albumArt;
+    albumArt.style.display = "block";
+  } catch (e) {
+    const trackName = document.getElementById("track-name");
+    const artistName = document.getElementById("artist-name");
+    const albumArt = document.getElementById("album-art");
+    trackName.textContent = ERROR_TITLE;
+    artistName.textContent = ERROR_ARTIST;
+    albumArt.src = FALLBACK_IMG;
+    albumArt.style.display = "block";
+    console.error('Spotify widget error:', e);
+  }
+}
+fetchNowPlaying();
+setInterval(fetchNowPlaying, 30000);
+</script> 
