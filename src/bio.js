@@ -26,6 +26,18 @@ export const bio = {
       alt:"Twitter Icon",
       url: "https://x.com/designedbyalok",
     },
+    {
+      name: "GitHub",
+      icon: "/github.svg",
+      alt: "GitHub Icon",
+      url: "https://github.com/designedbyalok",
+    },
+    {
+      name: "Peerlist",
+      icon: "/peerlist.svg",
+      alt: "Peerlist Icon",
+      url: "https://peerlist.io/designedbyalok",
+    },
   ],
   tabs: [
     {

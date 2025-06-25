@@ -1,0 +1,141 @@
+<div class="spotify-widget-modern">
+	<img class="album-art-modern" src="/src/layouts/Believer.jpeg" alt="Believer Album Art" />
+	<div class="spotify-track-info">
+		<div class="song-title-modern" title="Believer">Believer</div>
+		<div class="song-artist-modern" title="Imagine Dragons">Imagine Dragons</div>
+	</div>
+	<div class="spotify-controls-row">
+		<button aria-label="Previous track" class="spotify-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg></button>
+		<button aria-label="Play" class="spotify-btn"><svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><polygon points="5 3 19 12 5 21 5 3"/></svg></button>
+		<button aria-label="Next track" class="spotify-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="5" x2="19" y2="19"></line></svg></button>
+	</div>
+	<span class="spotify-logo-modern">
+		<!-- White Spotify SVG icon -->
+		<img class="spotify-logo-icon" src="src/layouts/mdi_spotify.svg" alt="Spotify Logo" />
+	</span>
+</div>
+<style>
+.spotify-widget-modern {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	z-index: 20;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+	border-radius: 1rem;
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+	border: .5px solid rgba(255,255,255,0.18);
+	backdrop-filter: blur(18px) saturate(1.2);
+	-webkit-backdrop-filter: blur(18px) saturate(1.2);
+	padding: 1rem 1rem 1rem 1rem;
+	min-width: 240px;
+	max-width: 480px;
+	min-height: 64px;
+	height: 72px;
+	gap: 0.7rem;
+	overflow: hidden;
+	margin: 0;
+}
+/* Add a dedicated class for the Spotify logo */
+.spotify-logo-icon {
+	width: 24px;
+	height: 24px;
+	flex-shrink: 0;
+}
+
+.album-art-modern {
+	width: 40px;
+	height: 40px;
+	border-radius: 0.5rem;
+	object-fit: cover;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+	flex-shrink: 0;
+}
+
+/* Then update the logo image markup */
+<img class="spotify-logo-icon" src="/src/layouts/mdi_spotify.svg" alt="Spotify Logo" />
+}
+.spotify-track-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-width: 0;
+	margin-right: 0.7rem;
+}
+.song-title-modern {
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 700;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 120px;
+}
+.song-artist-modern {
+	color: #cfcfcf;
+	font-size: 0.85rem;
+	font-weight: 400;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 120px;
+}
+.spotify-controls-row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.7rem;
+	margin: 0 0.7rem 0 0;
+}
+.spotify-logo-modern {
+	display: flex;
+	align-items: center;
+	margin-left: 0.2rem;
+}
+.spotify-btn {
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	transition: transform 0.15s;
+}
+.spotify-btn:focus {
+	outline: 2px solid #fff;
+}
+.spotify-btn:hover {
+	transform: scale(1.12);
+}
+@media (max-width: 600px) {
+	.spotify-widget-modern {
+		top: 1rem;
+		right: 0.5rem;
+		padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+		min-width: 0;
+		max-width: 95vw;
+		height: 56px;
+		gap: 0.4rem;
+	}
+	.album-art-modern {
+		width: 28px;
+		height: 28px;
+	}
+	.song-title-modern {
+		font-size: 0.85rem;
+		max-width: 70px;
+	}
+	.song-artist-modern {
+		font-size: 0.7rem;
+		max-width: 70px;
+	}
+	.spotify-logo-modern img {
+		width: 16px;
+		height: 16px;
+	}
+}
+</style> 

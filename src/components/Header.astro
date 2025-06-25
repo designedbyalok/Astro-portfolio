@@ -1,48 +1,20 @@
 ---
-import { bio } from "../bio";
-
-const { email, socials } = bio;
+import SpotifyWidget from "./SpotifyWidget.astro";
 ---
 
 <header>
-    <a class="email" href={`mailto:${email}`}>
-        <img src="/mail.svg" alt="Mail Icon" />
-        Get in touch
-    </a>
-    <ul>
-        {
-            socials.map((social, index, arr) => {
-                const { name, url, icon,alt } = social;
-                return (
-                    <>
-                        <li>
-                            <a href={url} target="_blank">
-                                <span>{name}</span>
-                                <img src={icon} alt={alt} />
-                            </a>
-                        </li>
-                        {index < arr.length - 1 && (
-                            <img
-                                class="separator"
-                                src="/separator.svg"
-                                alt="seperator-icon"
-                            />
-                        )}
-                    </>
-                );
-            })
-        }
-    </ul>
+    <SpotifyWidget />
 </header>
 
 <style>
     header {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         width: 100%;
         position: absolute;
         top: 3rem;
         padding-inline: 3rem;
+        z-index: 20;
     }
 
     @media screen and (max-width: 576px) {
@@ -100,10 +72,5 @@ const { email, socials } = bio;
             padding: 1rem;
         }
     }
-
-    a.email {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
+}
 </style>

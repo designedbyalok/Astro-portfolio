@@ -1,50 +1,33 @@
-# Welcome to [Astro](https://astro.build)
+Alok Kumar – Portfolio
 
-[Configuration](https://codesandbox.io/docs/projects/learn/setting-up/tasks) has been added to optimize it for [CodeSandbox](https://codesandbox.io/p/dashboard).
+Welcome to my portfolio repository!I’m Alok Kumar, a Product Designer at FoldHealth with a background in Computer Science and experience shaping user-centric digital products.
 
-[![Edit in CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/github/codesandbox/codesandbox-template-astro/main)
+🚀 About Me
+	•	Product Designer @ FoldHealth (B2B2C, Healthcare IT)
+	•	Ex-Banyan Cloud (Founding Designer for enterprise SaaS & design system)
+	•	Experience in product research, ideation, prototyping, and design systems
+	•	Passion for intuitive, effective, and delightful user experiences
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+🛠️ Skills & Tools
+	•	Product Design, User Flows, User Research, UX/UI
+	•	Figma, Sketch, Adobe XD, Framer
+	•	HTML, CSS, JavaScript, TypeScript
 
-## 🚀 Project Structure
+📂 Featured Projects
+	•	Roots Design System: Open-source system for Banyan Cloud, enabling scalable product design
+	•	LightOS Redesign: Simplified enterprise UX with a focus on usability
+	•	Medication Tracker, OneCard App Redesign, Architecture Studio Landing Page, Nooks (Nearby Books)
 
-Inside of your Astro project, you'll see the following folders and files:
+🎓 Education
+	•	B.E. in Computer Science, Anna University
 
-```
-/
-├── public/
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+🌟 Fun Fact
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+I love prototyping as a way to explore new interaction models and bring ideas to life. Ask me about the difference between enterprise and consumer UX—there’s more nuance than you might expect!
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components or layouts.
+📫 Let’s Connect
+	•	LinkedIn ↗
+	•	Peerlist ↗
+	•	designedbyalok.com ↗
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
-
-## 👀 Want to learn more?
-
-- [CodeSandbox Projects — Docs](https://docs.codesandbox.io)
-- [CodeSandbox — Discord](https://discord.gg/Ggarp3pX5H)
-- [Astro — GitHub](https://github.com/withastro/astro)
-- [Astro — Docs](https://docs.astro.build)
-- [Astro - Discord](https://astro.build/chat)
+Curious? Explore my projects and let’s discuss how design can shape better digital experiences!

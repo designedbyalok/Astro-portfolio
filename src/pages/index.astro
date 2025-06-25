@@ -2,29 +2,73 @@
 import Card from "../components/Card.astro";
 import Tabs from "../components/Tabs.astro";
 import Layout from "../layouts/Layout.astro";
+import { bio } from "../bio";
 ---
 
 <Layout title="Alok Kumar | Product Designer" >
 	<main>
-		<Card />
-		<Tabs />
-		<Footer />
+		<div class="center-content">
+			<Card />
+		</div>
+		<div class="bottom-content">
+			<Tabs />
+			<div class="social-icons">
+				{bio.socials.filter(social => social.name !== "Peerlist").map((social) => (
+					<a href={social.url} target="_blank" rel="noopener noreferrer">
+						<img src={social.icon} alt={social.alt} />
+					</a>
+				))}
+			</div>
+		</div>
 	</main>
 </Layout>
 
 <style>
 	:root {
-		/*--astro-gradient: linear-gradient(45deg, #4f39fa, #da62c4);*/
-		--astro-gradient: linear-gradient(45deg, #a14df3, #e1b5f8);
+		--astro-gradient: linear-gradient(45deg, #4f39fa, #da62c4);
+	}
+	@media (max-width: 600px) {
+		.album-art {
+			width: 32px;
+			height: 32px;
+			margin-right: 0.4rem;
+		}
 	}
 	main {
-		width:100vw;
-		height: 100vh;
 		display: flex;
-		flex: 1;
 		flex-direction: column;
+		height: 100vh;
+		width: 100vw;
+	}
+	.center-content {
+		flex: 1;
+		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin: auto;
+	}
+	.bottom-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+	.social-icons {
+		display: flex;
+		gap: 2rem;
+		justify-content: center;
+		align-items: center;
+		margin-top: 1rem;
+	}
+	.social-icons a img {
+		width: 28px;
+		height: 28px;
+		filter: brightness(0) invert(1);
+		transition: transform 0.2s;
+	}
+	.social-icons a:hover img {
+		transform: scale(1.1);
 	}
 </style>
+
+
